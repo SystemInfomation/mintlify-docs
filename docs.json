@@ -1,13 +1,12 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "palm",
+  "theme": "sequoia",
   "name": "Pals Club Support",
   "colors": {
     "primary": "#6366F1",
     "light": "#818CF8",
     "dark": "#4338CA"
   },
-  "favicon": "/favicon.svg",
   "search": {
     "prompt": "Search Pals Club help articles..."
   },
