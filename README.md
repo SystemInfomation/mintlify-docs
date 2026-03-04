@@ -1,55 +1,61 @@
-# Mintlify Starter Kit
+# Pals Club Support Portal
 
-Use the starter kit to get your docs deployed and ready to customize.
+A production-quality support documentation site built with [Mintlify](https://mintlify.com), designed to reduce support tickets and guide users to solutions fast.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Information architecture
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
-
-```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+| Section | Description |
+|---------|-------------|
+| **Support Hub** | Landing page, FAQ, and glossary |
+| **Getting Started** | Quickstart guide and system requirements |
+| **Account & Billing** | Account management, subscriptions, and account recovery |
+| **Using Pals Club** | Features overview and core workflow guides |
+| **Troubleshooting** | Common issues, decision-tree playbook, and diagnostics collection |
+| **Status & Incidents** | Platform status and incident process |
+| **Safety & Legal** | Community guidelines, privacy controls, terms, and privacy policy |
+| **Developers** | API overview and integration placeholders |
+| **Contact Support** | Support channels, escalation guide, and request templates |
 
 ## Development
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview the documentation locally:
 
-```
+```bash
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Run the development server at the root of this repository (where `docs.json` is located):
 
-```
+```bash
 mint dev
 ```
 
 View your local preview at `http://localhost:3000`.
 
-## Publishing changes
+## Deployment
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+### Option A: Mintlify hosting (recommended)
 
-## Need help?
+1. Install the [Mintlify GitHub app](https://dashboard.mintlify.com/settings/organization/github-app) from your dashboard.
+2. Push changes to the default branch — deployments happen automatically.
 
-### Troubleshooting
+### Option B: Self-hosted (Vercel / Netlify / GitHub Pages)
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+Mintlify generates static output that can be deployed to any static hosting provider. Refer to the [Mintlify deployment docs](https://mintlify.com/docs/quickstart) for details.
 
-### Resources
+## Extending the docs
+
+- **Add a new page**: Create an MDX file in the appropriate directory and add its path to `docs.json` under the correct navigation group.
+- **Update navigation**: Edit the `navigation.tabs` array in `docs.json`.
+- **Check for broken links**: Run `mint broken-links` locally.
+- **Validate changes**: Run `mint dev` and review pages in the browser before pushing.
+
+## Placeholders
+
+This documentation uses placeholder values (e.g., `[CONTACT_EMAIL]`, `[STATUS_PAGE_URL]`, `[BILLING_PROVIDER]`) where product-specific details are needed. Search for `[` across MDX files to find and replace all placeholders with real values.
+
+## Resources
+
 - [Mintlify documentation](https://mintlify.com/docs)
+- [MDX syntax reference](https://mintlify.com/docs/text)
+- [Component reference](https://mintlify.com/docs/components)
