@@ -1,68 +1,111 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Pals Club Support",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4338CA"
   },
   "favicon": "/favicon.svg",
+  "search": {
+    "prompt": "Search Pals Club help articles..."
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Support Hub",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Welcome",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "faq",
+              "glossary"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Getting Started",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "getting-started/quickstart",
+              "getting-started/system-requirements"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Account & Billing",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "account-billing/manage-account",
+              "account-billing/billing-subscriptions",
+              "account-billing/account-recovery"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Using Pals Club",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "using-pals-club/features-overview",
+              "using-pals-club/core-workflows"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Troubleshooting",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Troubleshooting",
             "pages": [
-              "api-reference/introduction"
+              "troubleshooting/common-issues",
+              "troubleshooting/playbook",
+              "troubleshooting/diagnostics"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Status & Incidents",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "status-incidents"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Safety & Legal",
+        "groups": [
+          {
+            "group": "Safety & Community",
+            "pages": [
+              "safety-privacy/community-guidelines",
+              "safety-privacy/privacy-safety"
+            ]
+          },
+          {
+            "group": "Legal",
+            "pages": [
+              "legal/terms",
+              "legal/privacy-policy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developers",
+        "groups": [
+          {
+            "group": "Developer Resources",
+            "pages": [
+              "developers/api-overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Contact Support",
+        "groups": [
+          {
+            "group": "Get Help",
+            "pages": [
+              "contact-support/contact",
+              "contact-support/escalation",
+              "contact-support/templates"
             ]
           }
         ]
@@ -71,14 +114,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Support Hub",
+          "href": "/",
+          "icon": "life-ring"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Status Page",
+          "href": "/status-incidents",
+          "icon": "signal"
         }
       ]
     }
@@ -90,33 +133,20 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Contact Support",
+        "href": "/contact-support/contact"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open Pals Club",
+      "href": "https://palsclub.example.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/palsclub",
+      "github": "https://github.com/SystemInfomation/pals-club"
     }
   }
 }
