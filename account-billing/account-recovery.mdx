@@ -1,0 +1,147 @@
+---
+title: "Account recovery"
+description: "Regain access to your Pals Club account if you forgot your password, lost your 2FA device, or believe your account was compromised"
+---
+
+Locked out of your Pals Club account? This guide covers the most common
+recovery scenarios. Choose the one that matches your situation.
+
+<Warning>
+  **Time limits apply.** Some recovery options are only available for a limited
+  window. Deleted accounts can only be restored within [GRACE_PERIOD] days, and
+  compromised-account reports should be filed as soon as possible.
+</Warning>
+
+## Forgot password
+
+Use this flow if you know your email address but cannot remember your password.
+
+<Steps>
+  <Step title="Go to the login page">
+    Open [LOGIN_URL] and click **Forgot password?** below the sign-in form.
+  </Step>
+  <Step title="Enter your email address">
+    Type the email associated with your Pals Club account and click **Send
+    Reset Link**.
+  </Step>
+  <Step title="Check your inbox">
+    Open the reset email and click the link inside. The link expires after
+    [RESET_LINK_EXPIRY].
+  </Step>
+  <Step title="Create a new password">
+    Enter and confirm a strong, unique password, then click **Reset Password**.
+    You will be signed in automatically.
+  </Step>
+</Steps>
+
+<Tip>
+  Enable two-factor authentication (2FA) after resetting your password for an
+  extra layer of security. You can do this under **Account Settings →
+  Security → Two-Factor Authentication**.
+</Tip>
+
+## Locked out — two-factor authentication issues
+
+If you have 2FA enabled but have lost access to your authenticator app or
+device, follow these steps.
+
+<Steps>
+  <Step title="Try your backup codes">
+    When you set up 2FA, you were given a set of one-time backup codes. Enter
+    one of these codes on the 2FA prompt to sign in.
+  </Step>
+  <Step title="No backup codes? Contact support">
+    If you no longer have your backup codes, go to
+    [Contact Support](/contact-support/contact) and select **Account Access** as
+    the category. You will need to verify your identity.
+  </Step>
+  <Step title="Verify your identity">
+    Our support team may ask you to confirm details such as the email on file,
+    recent account activity, or a government-issued ID.
+  </Step>
+  <Step title="Regain access">
+    Once verified, support will disable 2FA on your account so you can sign in
+    and reconfigure it.
+  </Step>
+</Steps>
+
+<Info>
+  Identity verification typically takes [IDENTITY_VERIFY_SLA] business days.
+  For faster resolution, have your details ready before contacting support.
+</Info>
+
+## Compromised account
+
+If you believe someone else has gained unauthorized access to your account, act
+quickly.
+
+<Steps>
+  <Step title="Reset your password immediately">
+    Follow the [Forgot password](#forgot-password) steps above to change your
+    password. If you cannot reset it because the attacker changed your email,
+    proceed to the next step.
+  </Step>
+  <Step title="Report the compromise">
+    Go to [Contact Support](/contact-support/contact) and select **Compromised
+    Account**. Provide as much detail as possible, including when you last had
+    access and any suspicious activity you noticed.
+  </Step>
+  <Step title="Secure linked accounts">
+    Change the password on any other services where you used the same password
+    as your Pals Club account.
+  </Step>
+  <Step title="Review your account after recovery">
+    Once support restores your access, review **Account Settings → Security** to
+    remove unrecognized sessions, update your email, and enable 2FA.
+  </Step>
+</Steps>
+
+<Warning>
+  If the attacker changed your email address, only the Pals Club support team
+  can restore your original email. Do **not** create a new account with the same
+  email — this may delay recovery.
+</Warning>
+
+## Recover a deleted account
+
+If you recently deleted your account and want it back, you may still be within
+the recovery window.
+
+<Steps>
+  <Step title="Log in within the grace period">
+    Try signing in with your original credentials at [LOGIN_URL]. If your
+    account is still within the [GRACE_PERIOD]-day grace period, you will see a
+    prompt to restore it.
+  </Step>
+  <Step title="Click Restore Account">
+    Confirm that you want to reactivate your account. Your profile, data, and
+    connections will be fully restored.
+  </Step>
+  <Step title="Grace period expired?">
+    If the grace period has passed, your data has been permanently deleted.
+    Contact [CONTACT_EMAIL] for further assistance, but note that recovery is
+    not guaranteed.
+  </Step>
+</Steps>
+
+<Info>
+  To learn more about deactivation vs. deletion and the grace period, see
+  [Manage your account](/account-billing/manage-account#deactivate-or-delete-account).
+</Info>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Manage your account" icon="user-gear" href="/account-billing/manage-account">
+    Update your profile, credentials, and notification preferences.
+  </Card>
+  <Card title="Contact support" icon="headset" href="/contact-support/contact">
+    Reach the Pals Club support team for help with account access.
+  </Card>
+  <Card title="Support templates" icon="file-lines" href="/contact-support/templates">
+    Pre-filled templates for recovery and escalation requests.
+  </Card>
+  <Card title="Escalation" icon="arrow-up-right-dots" href="/contact-support/escalation">
+    Learn how to escalate your case if standard recovery is not working.
+  </Card>
+</CardGroup>

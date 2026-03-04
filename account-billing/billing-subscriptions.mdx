@@ -1,0 +1,145 @@
+---
+title: "Billing & subscriptions"
+description: "View your plan, manage payment methods, upgrade or downgrade, and handle refunds for your Pals Club subscription"
+---
+
+Pals Club offers free and premium plans. This page explains how to view and
+manage everything related to billing and subscriptions.
+
+<Info>
+  All payments are securely processed by **[BILLING_PROVIDER]**. Pals Club does
+  not store your full card number or banking details — all sensitive payment data
+  is handled by [BILLING_PROVIDER] in accordance with PCI-DSS standards.
+</Info>
+
+## View current plan
+
+<Steps>
+  <Step title="Open billing settings">
+    Click your avatar in the top-right corner and select **Account Settings →
+    Billing**.
+  </Step>
+  <Step title="Review your plan details">
+    The **Current Plan** section shows your plan name, billing cycle (monthly or
+    annual), next renewal date, and price.
+  </Step>
+</Steps>
+
+## Upgrade or downgrade
+
+<Steps>
+  <Step title="Go to the Plans page">
+    From **Account Settings → Billing**, click **Change Plan**.
+  </Step>
+  <Step title="Choose a new plan">
+    Compare available plans and select the one that fits your needs. Premium
+    features include [PREMIUM_FEATURE_LIST].
+  </Step>
+  <Step title="Confirm the change">
+    Review the prorated amount (if applicable) and click **Confirm**. Your new
+    plan takes effect immediately.
+  </Step>
+</Steps>
+
+<Tip>
+  Switching from monthly to annual billing can save you up to
+  [ANNUAL_DISCOUNT]% — look for the toggle on the Plans page.
+</Tip>
+
+## Update payment method
+
+<Steps>
+  <Step title="Navigate to Payment Methods">
+    Go to **Account Settings → Billing → Payment Methods**.
+  </Step>
+  <Step title="Add or replace a card">
+    Click **Add Payment Method**, enter your new card details, and click
+    **Save**. To remove an old card, click the **⋯** menu next to it and select
+    **Remove**.
+  </Step>
+</Steps>
+
+<Info>
+  Pals Club accepts Visa, Mastercard, American Express, and select regional
+  payment methods. For questions about accepted methods, contact
+  [CONTACT_EMAIL].
+</Info>
+
+## Cancel subscription
+
+<Steps>
+  <Step title="Open Billing settings">
+    Go to **Account Settings → Billing**.
+  </Step>
+  <Step title="Click Cancel Subscription">
+    You will be asked to confirm. Once cancelled, you retain premium access until
+    the end of your current billing period.
+  </Step>
+</Steps>
+
+<Warning>
+  After the billing period ends, your account reverts to the free plan and you
+  will lose access to premium features. Any data exceeding free-plan limits may
+  become read-only.
+</Warning>
+
+## Request a refund
+
+If you believe you were charged in error or are otherwise eligible for a refund,
+follow these steps:
+
+<Steps>
+  <Step title="Gather your billing details">
+    Note the charge date, amount, and the last four digits of the payment method
+    used.
+  </Step>
+  <Step title="Submit a refund request">
+    Go to [Contact Support](/contact-support/contact) and select **Billing
+    Issue** as the category, or use our
+    [refund request template](/contact-support/templates).
+  </Step>
+  <Step title="Wait for review">
+    Refund requests are typically reviewed within [REFUND_SLA] business days.
+    You will receive an email at your registered address with the outcome.
+  </Step>
+</Steps>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="When am I billed?">
+    You are billed at the start of each billing cycle — either monthly on the
+    date you first subscribed, or annually on your subscription anniversary.
+  </Accordion>
+  <Accordion icon="receipt" title="Where can I find my invoices?">
+    Invoices are available under **Account Settings → Billing → Invoices**. You
+    can download them as PDF for your records.
+  </Accordion>
+  <Accordion icon="rotate-left" title="Can I get a prorated refund if I downgrade?">
+    Yes. When you downgrade mid-cycle, the unused portion of your current plan is
+    applied as credit toward your next billing period.
+  </Accordion>
+  <Accordion icon="gift" title="Do you offer discounts or promotions?">
+    Pals Club occasionally offers promotional pricing. Check
+    [PROMOTIONS_URL] or follow us on social media for announcements.
+  </Accordion>
+  <Accordion icon="circle-question" title="What happens if my payment fails?">
+    If a payment fails, we retry up to [RETRY_COUNT] times over
+    [RETRY_WINDOW] days. You will receive email notifications before your
+    account is downgraded to the free plan.
+  </Accordion>
+</AccordionGroup>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Manage your account" icon="user-gear" href="/account-billing/manage-account">
+    Update your profile, change your password, or deactivate your account.
+  </Card>
+  <Card title="Support templates" icon="file-lines" href="/contact-support/templates">
+    Pre-filled templates for common requests, including refund appeals.
+  </Card>
+  <Card title="Contact support" icon="headset" href="/contact-support/contact">
+    Reach our support team for billing questions or disputes.
+  </Card>
+</CardGroup>
