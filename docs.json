@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "maple",
   "name": "Pals Club Support",
   "colors": {
     "primary": "#6366F1",
@@ -90,22 +90,25 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Contact Support",
-        "href": "/contact-support/contact"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Open Pals Club",
       "href": "https://palsclub.example.com"
     }
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/palsclub",
-      "github": "https://github.com/SystemInfomation/pals-club"
+  "api": {
+    "playground": {
+      "proxy": false
     }
+  },
+  "seo": {
+    "indexing": "all"
+  },
+  "metadata": {
+    "timestamp": false
+  },
+  "appearance": {
+    "default": "dark"
   }
 }
