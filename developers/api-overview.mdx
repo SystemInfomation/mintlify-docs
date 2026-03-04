@@ -1,0 +1,132 @@
+---
+title: "Developer resources"
+description: "API reference, webhooks, and integration guides for Pals Club"
+---
+
+This section covers the developer-facing capabilities of Pals Club. API availability depends on the product roadmap — check back regularly or [contact support](/contact-support/contact) to request access.
+
+<Info>
+  This section will be expanded as developer resources become available. The information below serves as a structural preview of what to expect.
+</Info>
+
+## API overview
+
+The Pals Club API provides programmatic access to core platform features. The API follows REST conventions and returns JSON responses.
+
+<Note>
+  API endpoints described here are placeholders. Confirm availability and current specifications with the Pals Club team before building integrations.
+</Note>
+
+```text Base URL (placeholder)
+https://api.palsclub.com/v1
+```
+
+Key characteristics:
+
+- **Protocol:** HTTPS only
+- **Format:** JSON request and response bodies
+- **Versioning:** URL-based (e.g., `/v1/`)
+- **Documentation:** OpenAPI specification will be published at `[API_DOCS_URL]`
+
+## Authentication
+
+All API requests require authentication. Pals Club supports the following methods:
+
+<Tabs>
+  <Tab title="API key">
+    Include your API key in the `Authorization` header:
+
+    ```bash
+    curl -H "Authorization: Bearer YOUR_API_KEY" \
+      https://api.palsclub.com/v1/me
+    ```
+
+    API keys can be generated from the **Developer settings** page in your Pals Club dashboard. Each key is scoped to a specific set of permissions.
+  </Tab>
+  <Tab title="OAuth 2.0">
+    For applications acting on behalf of a user, use the OAuth 2.0 authorization code flow:
+
+    1. Redirect the user to `[OAUTH_AUTHORIZE_URL]`
+    2. Receive an authorization code at your callback URL
+    3. Exchange the code for an access token at `[OAUTH_TOKEN_URL]`
+    4. Include the access token in the `Authorization: Bearer` header
+
+    Access tokens expire after `[TOKEN_EXPIRY]`. Use the refresh token to obtain a new access token without re-prompting the user.
+  </Tab>
+</Tabs>
+
+<Warning>
+  Never expose API keys or access tokens in client-side code or public repositories. Store credentials securely using environment variables or a secrets manager.
+</Warning>
+
+## Rate limits
+
+To protect platform stability, the API enforces rate limits on all endpoints.
+
+| Tier | Requests per minute | Burst limit |
+| --- | --- | --- |
+| Free | 60 | 10 |
+| Pro | 300 | 50 |
+| Enterprise | Custom | Custom |
+
+When you exceed the rate limit, the API returns a `429 Too Many Requests` response with a `Retry-After` header indicating how many seconds to wait before retrying.
+
+<Tip>
+  Implement exponential backoff in your integration to handle rate-limit responses gracefully.
+</Tip>
+
+## Webhooks
+
+Webhooks allow your application to receive real-time notifications when events occur in Pals Club.
+
+<Steps>
+  <Step title="Register a webhook endpoint">
+    Provide a publicly accessible HTTPS URL in the **Developer settings** page of your dashboard. Select the event types you want to subscribe to.
+  </Step>
+  <Step title="Verify webhook signatures">
+    Each webhook request includes an `X-PalsClub-Signature` header. Verify this signature using your webhook secret to confirm the request is authentic.
+  </Step>
+  <Step title="Process events">
+    Parse the JSON payload and handle the event type. Respond with a `200` status code within 10 seconds to acknowledge receipt.
+  </Step>
+  <Step title="Handle retries">
+    If your endpoint does not respond with a `2xx` status code, Pals Club retries the delivery up to `[MAX_RETRIES]` times with exponential backoff.
+  </Step>
+</Steps>
+
+**Example event types (placeholder):**
+
+- `user.created`
+- `user.updated`
+- `connection.accepted`
+- `payment.completed`
+- `subscription.changed`
+
+## SDKs and libraries
+
+Official SDKs simplify integration by handling authentication, serialization, and error handling.
+
+| Language | Package | Status |
+| --- | --- | --- |
+| JavaScript / TypeScript | `@palsclub/sdk` | `[PLACEHOLDER]` |
+| Python | `palsclub-python` | `[PLACEHOLDER]` |
+| Ruby | `palsclub-ruby` | `[PLACEHOLDER]` |
+| Go | `palsclub-go` | `[PLACEHOLDER]` |
+
+<Note>
+  SDK availability is subject to change. Check the official repositories or contact the Pals Club team for the latest status.
+</Note>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Contact support" icon="headset" href="/contact-support/contact">
+    Questions about API access or integrations
+  </Card>
+  <Card title="FAQ" icon="circle-question" href="/faq">
+    Frequently asked questions
+  </Card>
+  <Card title="Features overview" icon="sparkles" href="/using-pals-club/features-overview">
+    Platform capabilities and feature details
+  </Card>
+</CardGroup>

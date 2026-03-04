@@ -1,0 +1,147 @@
+---
+title: "Troubleshooting playbook"
+description: "A step-by-step decision tree to diagnose and resolve issues"
+---
+
+This playbook walks you through a structured decision tree so you can quickly narrow down and resolve problems on Pals Club. Start at Step 1, follow the branch that matches your situation, and work through the recommended actions.
+
+## Step 1 — Identify the issue category
+
+What type of issue are you experiencing? Select a category below to jump to the relevant section.
+
+<CardGroup cols={2}>
+  <Card title="Login & authentication" icon="lock" href="#login--authentication-issues" />
+  <Card title="App performance" icon="gauge-high" href="#app-performance-issues" />
+  <Card title="Content & data" icon="database" href="#content--data-issues" />
+  <Card title="Billing & payments" icon="credit-card" href="#billing--payment-issues" />
+  <Card title="Connectivity" icon="wifi" href="#connectivity-issues" />
+</CardGroup>
+
+---
+
+## Login & authentication issues
+
+<Steps>
+  <Step title="Verify your credentials">
+    Confirm you are entering the correct email and password. Try resetting your password via **Forgot password** on the login screen.
+  </Step>
+  <Step title="Check your login method">
+    If you signed up with a social provider (Google, Apple, etc.), make sure you are tapping the same provider button — not the email/password form.
+  </Step>
+  <Step title="Review account status">
+    If you see a message that your account is locked or suspended, check your email for a notice from Pals Club and follow the appeal process.
+  </Step>
+  <Step title="Clear session data">
+    Clear your browser cookies or app cache, then attempt to log in again. On mobile, try uninstalling and reinstalling the app.
+  </Step>
+</Steps>
+
+**Still stuck?** [Collect diagnostics](/troubleshooting/diagnostics) and [contact support](/contact-support/contact).
+
+---
+
+## App performance issues
+
+<Steps>
+  <Step title="Update the app">
+    Make sure you are running the latest version of Pals Club from the App Store or Google Play.
+  </Step>
+  <Step title="Restart the app and device">
+    Force-close the app, then restart your device. This resolves most transient performance problems.
+  </Step>
+  <Step title="Free up resources">
+    Close background apps and ensure your device has sufficient free storage (at least 500 MB recommended).
+  </Step>
+  <Step title="Test on another network">
+    Switch between Wi-Fi and cellular data to determine whether the slowdown is network-related.
+  </Step>
+</Steps>
+
+**Still stuck?** [Collect diagnostics](/troubleshooting/diagnostics) and [contact support](/contact-support/contact).
+
+---
+
+## Content & data issues
+
+<Steps>
+  <Step title="Refresh the page or feed">
+    Pull down to refresh on mobile, or press **Ctrl+R** / **Cmd+R** in your browser.
+  </Step>
+  <Step title="Check for outages">
+    {/* TODO: replace placeholder with actual status page URL */}
+    Visit the [Pals Club status page](#) to see if there is a known service disruption.
+  </Step>
+  <Step title="Clear cache">
+    Go to **Settings → Storage → Clear cache** in the app, or clear your browser cache.
+  </Step>
+  <Step title="Try a different device or browser">
+    If content loads on another device, the issue is likely local to your original device or browser.
+  </Step>
+</Steps>
+
+**Still stuck?** [Collect diagnostics](/troubleshooting/diagnostics) and [contact support](/contact-support/contact).
+
+---
+
+## Billing & payment issues
+
+<Steps>
+  <Step title="Verify your payment method">
+    Go to **Settings → Subscription → Payment method** and confirm your card or payment account is valid and not expired.
+  </Step>
+  <Step title="Check with your bank">
+    Some banks flag subscription payments as suspicious. Contact your bank to authorize the charge.
+  </Step>
+  <Step title="Review your subscription status">
+    Under **Settings → Subscription**, check whether your plan is active, past due, or canceled.
+  </Step>
+  <Step title="Request a billing adjustment">
+    If you were charged incorrectly, [contact support](/contact-support/contact) with the transaction ID and date.
+  </Step>
+</Steps>
+
+**Still stuck?** [Collect diagnostics](/troubleshooting/diagnostics) and [contact support](/contact-support/contact).
+
+---
+
+## Connectivity issues
+
+<Steps>
+  <Step title="Test your internet connection">
+    Open a different website or app to confirm your device is online.
+  </Step>
+  <Step title="Disable VPN or proxy">
+    VPNs and proxies can interfere with real-time features like messaging and notifications. Temporarily disable them and retry.
+  </Step>
+  <Step title="Switch networks">
+    Toggle between Wi-Fi and mobile data to identify whether the issue is tied to a specific network.
+  </Step>
+  <Step title="Reset network settings">
+    On mobile, go to your device's network settings and select **Reset network settings**. Note that this will remove saved Wi-Fi passwords.
+  </Step>
+</Steps>
+
+**Still stuck?** [Collect diagnostics](/troubleshooting/diagnostics) and [contact support](/contact-support/contact).
+
+---
+
+<Tip>
+  **Before contacting support**, take screenshots or screen recordings of the issue. Include any error messages and note the exact steps you followed. This dramatically speeds up resolution time.
+</Tip>
+
+## Related resources
+
+<CardGroup cols={2}>
+  <Card title="Common issues" icon="circle-question" href="/troubleshooting/common-issues">
+    Quick fixes for the most frequently reported problems.
+  </Card>
+  <Card title="Collecting diagnostics" icon="stethoscope" href="/troubleshooting/diagnostics">
+    What logs and screenshots to gather before contacting support.
+  </Card>
+  <Card title="Escalation process" icon="arrow-up-right-dots" href="/contact-support/escalation">
+    Learn how to escalate an unresolved issue.
+  </Card>
+  <Card title="Contact support" icon="headset" href="/contact-support/contact">
+    Reach the Pals Club support team directly.
+  </Card>
+</CardGroup>
