@@ -1,0 +1,141 @@
+---
+title: "Escalation guide"
+description: "Severity levels, response targets, and how to escalate issues"
+---
+
+Pals Club uses a severity-based approach to triage and respond to support requests. Assigning the correct severity helps our team prioritize effectively and ensures critical issues receive immediate attention.
+
+## Severity levels
+
+<AccordionGroup>
+  <Accordion title="S0 — Critical" icon="circle-exclamation">
+    **Impact:** Complete service outage, confirmed data breach, or active security incident affecting all or most users.
+
+    | Metric | Target |
+    | --- | --- |
+    | First response | Less than 1 hour |
+    | Status updates | Every 30 minutes |
+    | Resolution target | As soon as possible — all hands on deck |
+
+    **Examples:**
+    - The Pals Club app or website is completely unreachable
+    - A confirmed unauthorized access or data breach
+    - Payment system processing all transactions incorrectly
+  </Accordion>
+
+  <Accordion title="S1 — High" icon="triangle-exclamation">
+    **Impact:** A major feature is broken for a large number of users, or payment processing is failing for a subset of transactions.
+
+    | Metric | Target |
+    | --- | --- |
+    | First response | Less than 4 hours |
+    | Status updates | Every 2 hours |
+    | Resolution target | Within 1 business day |
+
+    **Examples:**
+    - Messaging or notifications are not delivered for many users
+    - Payment charges succeed but receipts are not generated
+    - Login flow fails on a specific platform
+  </Accordion>
+
+  <Accordion title="S2 — Medium" icon="minus-circle">
+    **Impact:** A feature is degraded, a non-blocking bug exists, or users experience intermittent issues that have a workaround.
+
+    | Metric | Target |
+    | --- | --- |
+    | First response | Less than 1 business day |
+    | Status updates | As progress is made |
+    | Resolution target | Within 5 business days |
+
+    **Examples:**
+    - Search results are slow but still return correct data
+    - A UI element displays incorrectly on one browser
+    - Notifications arrive with a delay
+  </Accordion>
+
+  <Accordion title="S3 — Low" icon="circle-info">
+    **Impact:** Cosmetic issues, feature requests, or general questions with no immediate operational impact.
+
+    | Metric | Target |
+    | --- | --- |
+    | First response | Less than 3 business days |
+    | Status updates | Upon resolution |
+    | Resolution target | Backlog — prioritized during planning |
+
+    **Examples:**
+    - A button label has a typo
+    - A request for a new integration or feature
+    - General "how do I…" questions not covered in docs
+  </Accordion>
+</AccordionGroup>
+
+## Required information by severity
+
+The higher the severity, the more detail we need up front to begin investigating immediately.
+
+<Tabs>
+  <Tab title="S0 / S1">
+    - **Account email** and organization name (if applicable)
+    - **Timestamp** of when the issue started (with timezone)
+    - **Scope** — how many users or transactions are affected
+    - **Impact description** — what is broken and what the business impact is
+    - **Steps to reproduce** (if known)
+    - **Screenshots, logs, or a [diagnostics bundle](/troubleshooting/diagnostics)**
+    - **Workaround status** — is there a temporary workaround available?
+  </Tab>
+  <Tab title="S2">
+    - **Account email**
+    - **Description of issue** with steps to reproduce
+    - **Device, OS, and browser info**
+    - **Screenshots or screen recordings**
+    - **Error messages** (exact text or codes)
+  </Tab>
+  <Tab title="S3">
+    - **Account email**
+    - **Description** of the question, request, or cosmetic issue
+    - **Screenshots** (if relevant)
+  </Tab>
+</Tabs>
+
+## How to escalate
+
+If your issue is not receiving the attention its severity warrants, follow these steps to escalate.
+
+<Steps>
+  <Step title="Verify severity">
+    Review the severity definitions above and confirm your issue matches the level you selected. Tickets may be re-prioritized if the severity does not match the actual impact.
+  </Step>
+  <Step title="Update your existing ticket">
+    Reply to your existing support ticket with any new information — additional logs, a broader impact assessment, or a change in severity. Do not open a duplicate ticket.
+  </Step>
+  <Step title="Request escalation in the ticket">
+    Add the phrase **"Requesting escalation to [severity level]"** in your reply. Include a brief justification explaining why the severity should be raised.
+  </Step>
+  <Step title="Use the urgent escalation channel">
+    For **S0 incidents only**, if you have not received a response within 1 hour, email **[ESCALATION_EMAIL]** with your ticket number and a summary. This channel is monitored around the clock.
+  </Step>
+  <Step title="Follow up">
+    After escalation, expect an acknowledgment within the target response time for the new severity. If you still do not hear back, contact your account manager or reach out via the [community forum]([COMMUNITY_FORUM_URL]).
+  </Step>
+</Steps>
+
+<Warning>
+  Please use severity levels accurately. Miscategorized tickets may be re-prioritized by the support team, which can delay resolution for genuinely critical issues.
+</Warning>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Contact support" icon="headset" href="/contact-support/contact">
+    Support channels and what to include
+  </Card>
+  <Card title="Support templates" icon="file-lines" href="/contact-support/templates">
+    Ready-to-use request templates
+  </Card>
+  <Card title="Diagnostics" icon="stethoscope" href="/troubleshooting/diagnostics">
+    Collect logs and system info
+  </Card>
+  <Card title="Status & incidents" icon="signal" href="/status-incidents">
+    Current platform status
+  </Card>
+</CardGroup>
