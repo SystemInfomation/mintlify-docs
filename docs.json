@@ -15,6 +15,7 @@
     "tabs": [
       {
         "tab": "Support Hub",
+        "icon": "life-ring",
         "groups": [
           {
             "group": "Welcome",
@@ -50,6 +51,7 @@
       },
       {
         "tab": "Troubleshooting",
+        "icon": "wrench",
         "groups": [
           {
             "group": "Troubleshooting",
@@ -63,49 +65,6 @@
             "group": "Status & Incidents",
             "pages": [
               "status-incidents"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Safety & Legal",
-        "groups": [
-          {
-            "group": "Safety & Community",
-            "pages": [
-              "safety-privacy/community-guidelines",
-              "safety-privacy/privacy-safety"
-            ]
-          },
-          {
-            "group": "Legal",
-            "pages": [
-              "legal/terms",
-              "legal/privacy-policy"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Developers",
-        "groups": [
-          {
-            "group": "Developer Resources",
-            "pages": [
-              "developers/api-overview"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Contact Support",
-        "groups": [
-          {
-            "group": "Get Help",
-            "pages": [
-              "contact-support/contact",
-              "contact-support/escalation",
-              "contact-support/templates"
             ]
           }
         ]
